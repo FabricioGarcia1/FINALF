@@ -1,0 +1,626 @@
+:root{
+    --colorblack01:#10255f;
+    --colorblack02:#10255fd3;
+
+    --colorwhite01:rgb(245, 220, 0);
+    
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*HEADER*/
+
+.header {
+    width: 100%;
+    padding: 10px 0;
+    background-color:var(--colorblack02)
+}
+header i{
+    color:var(--colorwhite01);
+    width: 40px;
+    font-size: 23px;
+}
+
+/*NAVBAR*/
+
+.navbar{
+    background-color:var(--colorblack01);
+    transition: background-color 1.5s ease;
+}
+.navbar a {
+    color: var(--colorwhite01);
+    text-transform: uppercase;
+    list-style: none;
+    font-family: StagSans-Book;
+    margin-left: 20px;
+    align-items: center;
+    position: relative; /* Necesario para el pseudo-elemento */
+    transition: color 0.3s ease; /* Animación de color al pasar el mouse */
+}
+.navbar i{
+    margin-right: 10px;
+}
+
+.navbar img{
+    max-width: 65px;
+    max-height: 85px;
+}
+.contenedor01 .image01{
+    opacity: 0;
+}
+/*HOVERS DEL NAVBAR*/
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--colorwhite01);
+    transition: width 0.5s ease;
+}
+.navbar a:hover {
+    color: var(--colorwhite01);
+}
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 112px);
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero .container {
+    z-index: 3;
+  }
+  
+  .hero .welcome h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(212,175,55) ;
+    font-family:"Paprika";
+  }
+  
+  .hero .welcome p {
+    font-size: 24px;
+    font-family: "Paprika";
+    margin: 0;
+    color: rgb(192,192,192)
+    
+  }
+  
+  .hero .content {
+    margin-top: 40px;
+  }
+  
+  .hero .content .why-box {
+    color: var(--contrast-color);
+    background-color: #10255f81;
+    padding: 30px;
+    border-radius: 4px;
+    color: rgb(192,192,192)
+    
+  }
+  
+  .hero .content .why-box h3 {
+    color: var(--contrast-color);
+    font-weight: 700;
+    font-size: 34px;
+    font-family: "Paprika";
+    margin-bottom: 30px;
+    color: rgb(212,175,55)
+  }
+  
+  .hero .content .why-box p {
+    margin-bottom: 30px;
+    color: rgb(192,192,192) ;
+    font-size: 20px;
+    font-family: "Paprika";
+  }
+  
+  .hero .content .why-box .more-btn {
+    color: var(--contrast-color);
+    background: color-mix(in srgb, var(--contrast-color), transparent 80%);
+    display: inline-block;
+    padding: 6px 30px 8px 30px;
+    border-radius: 50px;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .hero .content .why-box .more-btn i {
+    font-size: 14px;
+    
+  }
+  
+  .hero .content .why-box .more-btn:hover {
+    background: var(--surface-color);
+    color: var(--accent-color);
+  }
+  
+  .hero .content .icon-box {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #10255f81;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.788);
+    padding: 40px 30px;
+    width: 100%;
+    font-family: "Paprika";
+    color: rgb(192,192,192);
+    
+  }
+  
+  .hero .content .icon-box i {
+    font-size: 40px;
+    font-family: "Paprika";
+    color: var(--accent-color);
+  }
+  
+  .hero .content .icon-box h4 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Paprika";
+    margin: 10px 0 20px 0;
+    color: rgb(212,175,55)
+  }
+  
+  .hero .content .icon-box p {
+    font-size: 20px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+  }
+  /*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+
+.container1{
+  
+  width: 100%;  /* Ancho del contenedor */
+  height: 600px ; /* Alto del contenedor */
+  overflow: hidden;   /* Oculta el contenido que sobresale */
+  padding: 15px;
+  align-items: flex-start;
+}
+
+
+.features{
+    background-color: #283557;
+}
+
+.features .tab-content img{
+  width: 80%;
+  height: 90%;
+}
+
+
+
+.features .nav-tabs {
+    border: 0;
+    background-color: #10255f81;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 6px;
+    width: auto;
+  }
+  
+  .features .nav-item {
+    margin: 0;
+    padding: 0 5px 0 0;
+  }
+  
+  .features .nav-item:last-child {
+    padding-right: 0;
+  }
+  
+  .features .nav-link {
+    background-color: black;
+    color: rgb(212,175,55) ;
+    padding: 10px 30px;
+    transition: 0.3s;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    border: 0;
+    margin: 0;
+  }
+  
+  @media (max-width: 468px) {
+    .features .nav-link {
+      padding: 8px 20px;
+    }
+  }
+  
+  .features .nav-link i {
+    padding-right: 15px;
+    font-size: 48px;
+    font-family:"Paprika" ;
+  }
+  
+  .features .nav-link h4 {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Paprika";
+    margin: 0;
+  }
+  
+  .features .nav-link:hover {
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  }
+  
+  .features .nav-link:hover h4 {
+    color: var(--accent-color);
+  }
+  
+  .features .nav-link.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  
+  .features .nav-link.active h4 {
+    color:rgb(192,192,192) ;
+  }
+  
+  .features .tab-content {
+    margin-top: 30px;
+  }
+  
+  .features .tab-pane h3 {
+    color: rgb(212,175,55) ;
+    font-weight: 700;
+    font-size: 35px;
+    font-family: "Paprika";
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .features .tab-pane h3:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: 0;
+  }
+  
+  .features .tab-pane ul {
+    list-style: none;
+    padding: 0;
+    color: rgb(192,192,192) ;
+    font-size: 20px;
+    font-family: "Paprika";
+  }
+  
+  .features .tab-pane ul li {
+    padding-top: 10px;
+  }
+  
+  .features .tab-pane ul i {
+    font-size: 20px;
+    font-family: "Paprika";
+    padding-right: 4px;
+    color: var(--accent-color-y);
+  }
+  
+  .features .tab-pane p:last-child {
+    margin-bottom: 0;
+    color: yellow;
+  }
+  .features .tab-content p{
+    color: yellow;
+  }
+
+
+.container3 {
+  background-color: #10255f;
+  width: 100%;  /* Ancho del contenedor */
+  height: 300px ; /* Alto del contenedor */
+  overflow: hidden;   /* Oculta el contenido que sobresale */
+  padding: 15px;
+  align-items: flex-start;
+}
+.container3 p {
+  color: rgb(192,192,192) ;
+  font-size: 20px;
+  font-family: "Lugrasimo"
+}
+.container3 h2 {
+  color: rgb(212,175,55) ;
+  font-family: "Lugrasimo";
+}
+.container3 h1 {
+  color: rgb(212,175,55) ;
+  font-family: "Lugrasimo";
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# equipo Section
+--------------------------------------------------------------*/
+
+.container-section-title {
+  background-color: #10255f;
+}
+
+.container-section-title h2 {
+  color: yellow;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Lugrasimo";
+}
+.container-section-title p {
+  color: yellow;
+  font-family: "Lugrasimo";
+  font-size: 25px;
+}
+
+.container2{
+  background-color: #10255f;
+  width: 100%;  /* Ancho del contenedor */
+  height: 100% ; /* Alto del contenedor */
+  overflow: hidden;   /* Oculta el contenido que sobresale */
+  padding: 15px;
+  align-items: flex-start;
+  
+}
+
+
+
+.equipo-miembros {
+  background-color: #283557;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding: 30px;
+  height: 100%;
+}
+
+@media (max-width: 468px) {
+   .equipo-miembros {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+.equipo-miembros .pic {
+  overflow: hidden;
+  width: 150px;
+  border-radius: 10%;
+  flex-shrink: 0;
+}
+
+.equipo-miembros .pic img {
+  transition: ease-in-out 0.3s;
+  width: 70%;           /* Establece el tamaño deseado */
+  height: 30%px;          /* Debe ser el mismo valor que el ancho para ser cuadrada */
+  border-radius: 10%;     /* Esto hace la imagen redonda */
+  object-fit: cover;      /* Asegura que la imagen se recorte de forma adecuada si no tiene proporciones cuadradas */
+}
+
+.equipo-miembros:hover {
+  transform: translateY(-10px);
+}
+
+.equipo-miembros.member-info {
+  padding-left: 30px;
+}
+
+@media (max-width: 468px) {
+  .equipo-miembros .miembro-info {
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
+}
+
+.equipo-miembros h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-family: "Lugrasimo";
+  color: rgb(212,175,55) ;
+}
+
+.equipo-miembros span {
+  display: block;
+  font-size: 24px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+  font-family: "Lugrasimo";
+  color: rgb(212,175,55) ;
+}
+
+.equipo-miembros span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 85%);
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 468px) {
+  .equipo-miembros span::after {
+    left: calc(50% - 25px);
+  }
+}
+
+.equipo-miembros p {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  color: rgb(169,169,169) ;
+  font-weight: bold;
+  font-family: "Lugrasimo";
+}
+
+.equipo-miembros .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+@media (max-width: 468px) {
+  .equipo-miembros .social {
+    justify-content: center;
+  }
+}
+
+.equipo-miembros .social a {
+  background: color-mix(in srgb, var(--default-color), transparent 94%);
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  color:rgb(17, 16, 16) ;
+}
+
+.equipo-miembros.social a i {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.equipo-miembros .social a:hover {
+  background: var(--accent-color);
+}
+
+.equipo-miembros.social a:hover i {
+  color: var(--contrast-color);
+}
+
+.equipo-miembros .social a+a {
+  margin-left: 8px;
+}
+
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.container-section-title {
+  background-color: #283557;
+  width: 100%;  /* Ancho del contenedor */
+  height: 100% ; /* Alto del contenedor */
+  overflow: hidden;   /* Oculta el contenido que sobresale */
+  padding: 15px;
+}
+.container4 {
+  background-color: #283557;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  
+}
+
+.container-section-title h2 {
+  color: rgb(212,175,55) ;
+}
+
+.container-section-title p {
+  color: rgb(212,175,55) ;
+}
+
+.testimonios-item {
+  background-color: #22293d;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.541);
+  padding: 30px;
+  position: relative;
+  height: 100%;
+  border-radius: 50px;
+  border: 6px solid var(--background-color);
+  float: left;
+  margin: 0 10px 0 0;
+  
+}
+
+
+.testimonios-item h3 {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: rgb(169,169,169) ;
+}
+
+.testimonios-item h4 {
+  font-size: 24px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+  color: rgb(133, 131, 131) ;
+}
+
+.testimonios .stars {
+  margin: 10px 0;
+}
+
+.testimonios .stars i {
+  color: #ffc107;
+  margin: 0 1px;
+  font-size: 23px;
+  font-family: "Lugrasimo";
+}
+
+
+.testimonios .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonios .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+  transform: scale(-1, -1);
+}
+
+.testimonios p {
+  font-style: italic;
+  font-size: 20px ;
+  margin: 15px 0 0 0;
+  padding: 0;
+  color: #D4AF37	
+}
+
